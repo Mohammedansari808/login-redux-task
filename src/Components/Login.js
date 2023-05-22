@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 function Login({ setValid, setUser }) {
     const navigate = useNavigate()
+    //formik and yup validation for input
     const userVali = Yup.object({
         email: Yup.string().matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Please enter a valid email").required("Please enter a Email"),
         password: Yup.string().required("Please enter a Password"),
